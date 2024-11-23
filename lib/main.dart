@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:baatcheet/services/navigation_service.dart';
 import 'package:baatcheet/pages/splash_page.dart';
 import 'package:baatcheet/pages/login_page.dart';
+import 'package:baatcheet/pages/register_page.dart';
 import 'package:baatcheet/pages/home_page.dart';
 import 'package:baatcheet/providers/authentication_provider.dart';
 
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/login',
         routes: {
           '/login': (BuildContext context) => const LoginPage(),
+          '/register': (BuildContext context) => const RegisterPage(),
           '/home': (BuildContext context) => HomePage(),
         },
       ),
