@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-// import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
 import 'package:baatcheet/services/navigation_service.dart';
 import 'package:baatcheet/pages/splash_page.dart';
 import 'package:baatcheet/pages/login_page.dart';
+import 'package:baatcheet/pages/home_page.dart';
+import 'package:baatcheet/providers/authentication_provider.dart';
 
 void main() async {
   runApp(
@@ -19,23 +21,33 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'BaatCheet',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          surface:
-              const Color.fromRGBO(36, 35, 49, 1.0), // Replaces backgroundColor
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<AuthenticationProvider>(
+          create: (BuildContext _context) {
+            return AuthenticationProvider();
+          },
         ),
-        scaffoldBackgroundColor: const Color.fromRGBO(36, 35, 49, 1.0),
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: Color.fromRGBO(30, 29, 37, 1.0),
+      ],
+      child: MaterialApp(
+        title: 'BaatCheet',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+            surface: const Color.fromRGBO(
+                36, 35, 49, 1.0), // Replaces backgroundColor
+          ),
+          scaffoldBackgroundColor: const Color.fromRGBO(36, 35, 49, 1.0),
+          bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+            backgroundColor: Color.fromRGBO(30, 29, 37, 1.0),
+          ),
         ),
+        navigatorKey: NavigationService.navigatorKey,
+        initialRoute: '/login',
+        routes: {
+          '/login': (BuildContext context) => const LoginPage(),
+          '/home': (BuildContext context) => HomePage(),
+        },
       ),
-      navigatorKey: NavigationService.navigatorKey,
-      initialRoute: '/login',
-      routes: {
-        '/login': (BuildContext context) => const LoginPage(),
-      },
     );
   }
 }
