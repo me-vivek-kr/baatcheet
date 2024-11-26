@@ -18,37 +18,33 @@ class AuthenticationProvider extends ChangeNotifier {
     _auth = FirebaseAuth.instance;
     _navigationService = GetIt.instance.get<NavigationService>();
     _databaseService = GetIt.instance.get<DatabaseService>();
+    // _auth.signOut();
 
     _auth.authStateChanges().listen((_user) async {
       if (_user != null) {
-        try {
-          // Update the last seen time in Firestore
-          await _databaseService.updateUserLastSeenTime(_user.uid);
+        // Update the last seen time in Firestore
+        await _databaseService.updateUserLastSeenTime(_user.uid);
 
-          // Fetch user details from Firestore
-          final _snapshot = await _databaseService.getUser(_user.uid);
+        // Fetch user details from Firestore
+        final _snapshot = await _databaseService.getUser(_user.uid);
 
-          if (_snapshot.exists && _snapshot.data() != null) {
-            Map<String, dynamic> _userData =
-                _snapshot.data()! as Map<String, dynamic>;
+        if (_snapshot.exists && _snapshot.data() != null) {
+          Map<String, dynamic> _userData =
+              _snapshot.data()! as Map<String, dynamic>;
 
-            // Create ChatUser object
-            user = ChatUser.fromJSON({
-              "uid": _user.uid,
-              "name": _userData["name"],
-              "email": _userData["email"],
-              "image": _userData["image"],
-              "lastActive": _userData["lastActive"],
-            });
+          // Create ChatUser object
+          user = ChatUser.fromJSON({
+            "uid": _user.uid,
+            "name": _userData["name"],
+            "email": _userData["email"],
+            "image": _userData["image"],
+            "lastActive": _userData["lastActive"],
+          });
 
-            // Navigate to home screen
-            _navigationService.removeAndNavigateToRoute('/home');
-          } else {
-            print("User document does not exist or has no data.");
-          }
-        } catch (e) {
-          // Handle any errors
-          print("Error handling authentication state: $e");
+          // Navigate to home screen
+          _navigationService.removeAndNavigateToRoute('/home');
+        } else {
+          print("User document does not exist or has no data.");
         }
       } else {
         _navigationService.removeAndNavigateToRoute('/login');
@@ -63,6 +59,27 @@ class AuthenticationProvider extends ChangeNotifier {
           email: _email, password: _password);
     } on FirebaseAuthException {
       print("Error logging user into Firebase");
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  Future<String?> registerUserUsingEmailAndPassword(
+      String _email, String _password) async {
+    try {
+      UserCredential _credentials = await _auth.createUserWithEmailAndPassword(
+          email: _email, password: _password);
+      return _credentials.user!.uid;
+    } on FirebaseAuthException {
+      print('Error Registering User');
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  Future<void> logout() async {
+    try {
+      await _auth.signOut();
     } catch (e) {
       print(e);
     }
