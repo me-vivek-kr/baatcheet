@@ -25,19 +25,25 @@ class _HomePageState extends State<HomePage> {
       body: _pages[_currentPage],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentPage,
-        onTap: (_index) {
+        onTap: (index) {
           setState(() {
-            _currentPage = _index;
+            _currentPage = index;
           });
         },
         items: const [
           BottomNavigationBarItem(
             label: "Chats",
-            icon: Icon(Icons.chat_bubble_sharp),
+            icon: Icon(
+              Icons.chat_bubble_sharp,
+              semanticLabel: 'Chat Page',
+            ),
           ),
           BottomNavigationBarItem(
             label: "Users",
-            icon: Icon(Icons.supervised_user_circle_sharp),
+            icon: Icon(
+              Icons.supervised_user_circle_sharp,
+              semanticLabel: 'Users Page',
+            ),
           )
         ],
       ),

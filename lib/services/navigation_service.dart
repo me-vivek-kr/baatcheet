@@ -1,3 +1,4 @@
+import 'package:baatcheet/models/chat.dart';
 import 'package:flutter/material.dart';
 
 class NavigationService {
@@ -11,7 +12,7 @@ class NavigationService {
     navigatorKey.currentState?.pushNamed(_route);
   }
 
-  void navigatorToPage(Widget _page) {
+  void navigateToPage(Widget _page) {
     navigatorKey.currentState?.push(
       MaterialPageRoute(
         builder: (BuildContext _context) {

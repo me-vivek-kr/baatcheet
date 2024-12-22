@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         navigatorKey: NavigationService.navigatorKey,
-        initialRoute: '/login',
+        initialRoute: '/home',
         routes: {
           '/login': (BuildContext context) => const LoginPage(),
           '/register': (BuildContext context) => const RegisterPage(),
