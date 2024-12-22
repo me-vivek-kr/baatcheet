@@ -75,6 +75,7 @@ class AuthenticationProvider extends ChangeNotifier {
     } catch (e) {
       print(e);
     }
+    return null;
   }
 
   Future<void> logout() async {

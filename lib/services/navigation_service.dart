@@ -1,4 +1,3 @@
-import 'package:baatcheet/models/chat.dart';
 import 'package:flutter/material.dart';
 
 class NavigationService {
