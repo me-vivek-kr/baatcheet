@@ -13,8 +13,8 @@ BaatCheet is a chat application built to provide real-time messaging capabilitie
 
 ## Screenshots
 
-<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/SplashScreen.jpg" alt="Splash Screen" width="400">
-<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Login_Page.jpg" alt="Login Page" width="400">
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/SplashScreen.jpg" alt="Splash Screen" width="300">
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Login_Page.jpg" alt="Login Page" width="300">
 <img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Register_Page.jpg" alt="Register Page" width="400">
 <img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat_Page.jpg" alt="Chat Page" width="400">
 <img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat1.jpg" alt="Chat 1" width="400">
