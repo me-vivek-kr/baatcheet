@@ -1,5 +1,5 @@
 # BaatCheet
-
+<div align="center"> <img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/images/Icon.png" alt="BaatCheet Logo" width="150"> </div>
 BaatCheet is a chat application built to provide real-time messaging capabilities. This app allows users to engage in one-on-one and group conversations, with a sleek interface and intuitive design. Below is a summary of the key features and visual representation of the app.
 
 ## Features
