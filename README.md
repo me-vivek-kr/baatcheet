@@ -20,7 +20,7 @@ BaatCheet is a chat application built to provide real-time messaging capabilitie
 ![Chat1](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat1.jpg)
 ![Chat2](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat2.jpg)
 ![Group Chat](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Group_ChatPage.jpg)
-![Users Page](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Users_Page.jpg)
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Users_Page.jpg" alt="Users Page" width="400">
 
 ## Installation
 
