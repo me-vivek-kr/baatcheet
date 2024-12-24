@@ -13,13 +13,13 @@ BaatCheet is a chat application built to provide real-time messaging capabilitie
 
 ## Screenshots
 
-![Splash Screen](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/SplashScreen.jpg)
-![Login Page](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Login_Page.jpg)
-![Register Page](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Register_Page.jpg)
-![Chat Page](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat_Page.jpg)
-![Chat1](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat1.jpg)
-![Chat2](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat2.jpg)
-![Group Chat](https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Group_ChatPage.jpg)
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/SplashScreen.jpg" alt="Splash Screen" width="400">
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Login_Page.jpg" alt="Login Page" width="400">
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Register_Page.jpg" alt="Register Page" width="400">
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat_Page.jpg" alt="Chat Page" width="400">
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat1.jpg" alt="Chat 1" width="400">
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Chat2.jpg" alt="Chat 2" width="400">
+<img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Group_ChatPage.jpg" alt="Group Chat" width="400">
 <img src="https://github.com/me-vivek-kr/baatcheet/blob/main/assets/Screenshot/Users_Page.jpg" alt="Users Page" width="400">
 
 ## Installation
@@ -30,10 +30,10 @@ To run the app locally, follow these steps:
 
 Open your terminal and run the following commands:
 
-``bash
+```
 git clone https://github.com/me-vivek-kr/baatcheet.git
 cd baatcheet
-``
+```
 Install Dependencies
 Fetch the Flutter packages required for the project:
 
@@ -48,7 +48,7 @@ flutter run
 
 ### Technologies Used
 
-(https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)Flutter: For building the cross-platform mobile application.
-Firebase: For real-time messaging and authentication.
-Provider: For state management.
-Firestore: For storing chat messages and user data.
+- **Flutter** : For building the cross-platform mobile application.
+- **Firebase** : For real-time messaging and authentication.
+- **Provider** : For state management.
+- **Firestore** : For storing chat messages and user data.
