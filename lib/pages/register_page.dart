@@ -112,7 +112,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   _name = _value;
                 });
               },
-              regExp: r".{8,}",
+              regExp: r".{2,}",
               hintText: "Name",
               obscureText: false,
             ),

@@ -69,7 +69,7 @@ class _ChatsPageState extends State<ChatsPage> {
                   },
                   icon: const Icon(
                     Icons.logout,
-                    color: Colors.blue,
+                    color: Color.fromRGBO(0, 82, 218, 1.0),
                   ),
                 ),
               ),

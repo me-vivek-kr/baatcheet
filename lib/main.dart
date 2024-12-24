@@ -37,9 +37,9 @@ class MyApp extends StatelessWidget {
             surface: const Color.fromRGBO(
                 36, 35, 49, 1.0), // Replaces backgroundColor
           ),
-          scaffoldBackgroundColor: const Color.fromRGBO(36, 35, 49, 1.0),
+          scaffoldBackgroundColor: const Color.fromRGBO(20, 20, 20, 1.0),
           bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-            backgroundColor: Color.fromRGBO(30, 29, 37, 1.0),
+            backgroundColor: Color.fromRGBO(41, 41, 43, 1),
           ),
         ),
         navigatorKey: NavigationService.navigatorKey,
